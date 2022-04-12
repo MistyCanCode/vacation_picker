@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="description" content="Lets pick a vacation destination">
+    	<meta name="keywords" content="vacation, destination">
+
+		<title>Pick your next vacation</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/vacation.css">
+	</head>
+	<body>
+		<main class="page-content">
+			<h2 class="welcome">Click on the element you most identify with to reveal your next vacation</h2>
+			<div class="card">
+				<div class="content">
+					<h2 class="title">Earth</h2>
+					<p class="copy">Dependable, careful and cautious, while enjoying a bit of decadance and pampering.</p><a href="#title"><button class="btn" id="earth" value="mountain">View Trips</button></a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="content">
+					<h2 class="title">Air</h2>
+					<p class="copy">Curious, friendly, and innovative, also prone to daydreaming.</p><a href="#title"><button class="btn" id="air" value="meteo">View Trips</button></a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="content">
+					<h2 class="title">Fire</h2>
+					<p class="copy">Enthusiastic, ambitious, and creative, truly enjoys recreational time.</p><a href="#title"><button class="btn" id="fire" value="camping">View Trips</button></a>
+				</div>
+			</div>
+			<div class="card">
+				<div class="content">
+					<h2 class="title">Water</h2>
+					<p class="copy">Fluid, sensitive, and intuitive, craves nourishment of the soul.</p><a href="#title"><button class="btn" id="water" value="beach">View Trips</button></a>
+				</div>
+			</div>
+			<div class="display">
+				<h1 id="title"></h1>
+				<hr/>
+				<div class="images">
+					<img id="daylight" src="" alt=""/>
+					<p id="dayP"></p>
+					<!-- <img id="current" src="" alt=""/>
+					<p id="currentP"></p> -->
+				</div>
+				<hr/>
+				<h3 id="city"></h3>
+				<a id="wikiLink" href=""><h3 id="wiki"></h3></a>
+				<hr/>
+				<h4 id="refresh"></h4>
+			</div>
+		</main>
+
+		<script type="text/javascript" src="js/vacation.js"></script>
+		<script type="text/javascript" src="js/config.js"></script>
+	</body>
+</html>
+
+
+<!-- This is Pug, pug is an HTML preprocessor that is supposed to help you write HTML code simpler, faster, and more powerful it was converted from https://pughtml.com-->
+<!-- - var cards = [{ title: 'Mountain View', copy: 'Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains', button: 'View Trips' }, { title: 'To The Beach', copy: 'Plan your next beach trip with these fabulous destinations', button: 'View Trips' }, { title: 'Desert Destinations', copy: 'It\'s the desert you\'ve always dreamed of', button: 'Book Now' }, { title: 'Explore The Galaxy', copy: 'Seriously, straight up, just blast off into outer space today', button: 'Book Now' }]
+
+
+mixin card(title, copy, button)
+  .card
+    .content
+      h2.title= title
+      p.copy= copy
+      button.btn= button
+
+main.page-content
+  each card in cards
+    +card(card.title, card.copy, card.button) -->

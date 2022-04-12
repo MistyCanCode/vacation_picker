@@ -1,6 +1,4 @@
-//import {config} from './config.js'
-//const KEY = config.API_KEY;
-const KEY = process.env.API_KEY;
+
 
 document.querySelector('#earth').addEventListener('click', getVacation)
 document.querySelector('#air').addEventListener('click', getVacation)
@@ -18,7 +16,7 @@ function getVacation(event){
         method: 'GET',
         headers: {
             'X-RapidAPI-Host': 'webcamstravel.p.rapidapi.com',
-            'X-RapidAPI-Key': `${KEY}`
+            'X-RapidAPI-Key': process.env.API_KEY
         }
     };
 

@@ -1,6 +1,6 @@
 //import {config} from './config.js'
 //const KEY = config.API_KEY;
-const KEY = 'f0ac5ede86msh263ca967f67a09dp12b34bjsnd5a50deecddb'
+const KEY = env.API_KEY;
 
 document.querySelector('#earth').addEventListener('click', getVacation)
 document.querySelector('#air').addEventListener('click', getVacation)

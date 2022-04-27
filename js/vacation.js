@@ -1,4 +1,4 @@
-const KEY = process.env.API_KEY
+const KEY = config.my_key
 
 document.querySelector('#earth').addEventListener('click', getVacation)
 document.querySelector('#air').addEventListener('click', getVacation)
